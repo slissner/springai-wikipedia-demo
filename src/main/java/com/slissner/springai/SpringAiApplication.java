@@ -20,12 +20,12 @@ public class SpringAiApplication {
   @Bean
   public CommandLineRunner commandLineRunner(final ArticleService articleService) {
     return args -> {
-      log.info("Okay, I am going to summarize articles...");
+      log.info("Okay, I am going to summarize articles and provide travel recommendations...");
 
-      final String summary = articleService.summarizeArticles();
+      final String recommendation = articleService.summarizeArticles();
 
-      log.info("The summary is:");
-      log.info(summary);
+      log.info("The travel recommendation is:");
+      log.info(recommendation);
       log.info("Done!");
     };
   }
